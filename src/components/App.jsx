@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import {MenuComponent} from "./Menu";
+import Menu from "../containers/Menu";
 import { Container } from 'semantic-ui-react';
-import BookCard from "./BookCard";
+import BookCard from "../containers/BookCard";
 import { Card } from 'semantic-ui-react'
 import Filter from "../containers/Filter";
 
@@ -20,7 +20,7 @@ class App extends Component {
         const { books, isReady } = this.props;
             return(
                 <Container>
-                    <MenuComponent/>
+                    <Menu/>
                     <Filter/>
                     <Card.Group itemsPerRow={4}>
                         {!isReady
